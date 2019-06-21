@@ -24,7 +24,7 @@ export const SubmitCompass = (props) =>  (
     <Form.Label className="form-title">Title of your Design Compass</Form.Label>
     <div className="input-area">
       <Form.Control name="title" type="text" placeholder="Title" onChange={props.onChange} value={props.title} />
-      <Button className="input-button" variant="primary" onClick={props.createCompass}> Submit Compass </Button>
+      <Button id="create-button" className="input-button" variant="primary" onClick={props.createCompass}> Submit Compass </Button>
     </div>
   </Form.Group>
 )
@@ -45,16 +45,22 @@ export const ChooseStructure = (props) =>  (
     </Form.Group>
 )
 const default_phases= [
-  {title:"Research",
-   description:"Phase for Research"},
-   {title:"Design",
-   description:"Phase for Design"},
-   {title:"Build",
-   description:"Phase for Build"},
+  {title:"Define a Problem",
+   description:"Phase for defining the problem"},
+   {title:"Research",
+   description:"researching our problem"},
    {title:"Brainstorm",
-   description:"Phase for Brainstorm"},
-   {title:"Laugh",
-   description:"Phase for Laugh"}
+   description:"brain storming solutions"},
+   {title:"Select",
+   description:"selecting the right solutions"},
+   {title:"Construct",
+   description:" constructing the solution"},
+   {title:"Evaluate",
+   description:" evaluating the implmentation of the solution"},
+   {title:"Communicate",
+   description:"test solution with others"},
+   {title:"Redesign",
+   description:"redesigning thesolution"}
 ]
 
 /**

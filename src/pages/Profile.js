@@ -8,9 +8,9 @@ import ProcessFeed from '../components/ListProcesses/ProcessFeed';
 import {updateUser, getUserbyUsername} from '../graphql_utils/utils';
 import { Auth } from 'aws-amplify';
 
-class Profile extends React.Component {
-  constructor() {
-    super();
+export class Profile extends React.Component {
+  constructor(props) {
+    super(props);
     //initial state
     this.state = {
       first_name: "",
@@ -162,7 +162,7 @@ class Profile extends React.Component {
   }
 
   submitPhoneNumber = () => {
-    if (this.state.update.phone_numberl !== this.state.phone_number) {
+    if (this.state.update.phone_number !== this.state.phone_number) {
       //update amplify
       Auth.currentAuthenticatedUser().then(user => {
         Auth.updateUserAttributes(user, {
